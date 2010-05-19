@@ -1,0 +1,11 @@
+<tr class="row-${odd}">
+	<td width="3%">&nbsp;</td>
+	<td headers="titre" class="text-align-left" width="47%"><strong><a change:link="document thread" tal:content="thread/getLabelAsHtml" /></strong>
+	</td>
+	<td headers="reponses" width="5%">${thread/getPostcount}</td>
+	<td headers="auteur" width="10%">${thread/getForummember/getPseudonym}</td>
+	<td headers="lectures" width="5%">${thread/getReadcount}</td>	
+	<td headers="derniere-reponse" class="text-align-left" width="30%">
+		<div tal:condition="thread/getLastpost" change:include="module 'forum'; template 'Forum-Block-Post-Thumbnail'; type 'html'; post thread/getLastpost"></div>
+	</td>
+</tr>

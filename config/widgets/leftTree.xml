@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<behaviour>
+	<event type="drop" target="modules_generic_rootfolder" flavour="listitem/component" 
+		source="modules_website_topic" actions="move" />
+		
+	<event type="select contextmenu" target="modules_website_topic" actions="create_ editPermissions -rename -delete remove">
+		<actiongroup name="create_" icon="add" actions="createForum" />
+	</event>
+	
+	<event type="select contextmenu" target="modules_forum_forum" actions="createsection_ editPermissions">
+		<actiongroup name="createsection_" icon="add" actions="createSection" />
+	</event>
+	
+	<event type="select contextmenu" target="modules_forum_section" actions="editPermissions">
+	</event>
+	
+	<event type="select contextmenu" target="modules_generic_rootfolder" actions="-openOrderChildren addTopic | editPermissions -createFolder" />
+	
+	<datasource module="forum" components="modules_website/topic forum section" />
+	
+	<columns>
+		<column ref="label" flex="5" label="Module-name" primary="true" properties="type" />
+	</columns>
+	
+	<event type="drop" target="modules_website_topic" flavour="listitem/component"
+		source="modules_forum_forum" actions="move" />
+		
+	<event type="drop" target="modules_forum_forum" flavour="listitem/component"
+		source="modules_forum_section" actions="move" />
+		
+	<event type="drop" target="modules_forum_section" flavour="listitem/component"
+		source="modules_forum_section modules_forum_thread" actions="move" />
+</behaviour>

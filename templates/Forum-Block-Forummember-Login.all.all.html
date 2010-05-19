@@ -1,0 +1,21 @@
+<form class="cmxform" action="" method="post">
+<ul tal:condition="errors" class="formauthentication-login-error" >
+	<li tal:repeat="error errors" tal:content="error" />
+</ul>
+
+<a change:link="tag contextual_website_website_modules_forum_forummember-detail;forumParam[action] 'create'">Créer un compte</a>
+<ol>
+	<li>
+		<label for="authenticationlogin" change:translate="&modules.users.frontoffice.authentication.Login;">Login</label>
+		<input name="forumParam[login]" id="authenticationlogin" type="text" value="" maxlength="50" />
+	</li>
+	<li>
+		<label for="authenticationpassword" change:translate="&modules.users.frontoffice.authentication.Password;">Password</label>
+		<input name="forumParam[password]" id="authenticationpassword" type="password" value="" maxlength="20" />
+	</li>
+	<li class="button">
+		<input name="forumParam[submit]" type="submit" 
+		change:i18nattr="value &modules.users.frontoffice.authentication.SubmitButton;" />
+	</li>
+</ol>
+</form>

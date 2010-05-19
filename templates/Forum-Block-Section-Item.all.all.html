@@ -1,0 +1,18 @@
+<tr class="row-${odd}">
+<td width="3%">&nbsp;</td>
+<td headers="sections" class="text-align-left" width="47%">
+<dl>
+	<dd>
+		<strong><a change:link="document section" tal:content="section/getLabelAsHtml">Titre de la section</a></strong>
+	</dd>
+	<dt>
+		${section/getDescriptionAsHtml}
+	</dt>
+</dl>
+</td>
+<td headers="sujets" width="10%">${section/getThreadcount}</td>
+<td headers="messages" width="10%">${section/getPostcount}</td>
+<td headers="dernier-message" class="text-align-left" width="30%">
+	<div tal:condition="section/getLastpost" change:include="module 'forum'; template 'Forum-Block-Post-Thumbnail'; type 'html'; post section/getLastpost"></div>
+</td>
+</tr>

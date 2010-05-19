@@ -1,0 +1,31 @@
+<hbox flex="1">
+
+	<vbox width="250">
+		<wtoolbar id="toolbar" attachment="leftTree" i18n:attributes="title &amp;modules.forum.bo.general.Module-name;" />
+		<wtree disabletoolbox="true" flex="1" id="leftTree" hideheader="true" />
+		<wpopup id="leftTreePopup" attachment="leftTree" />
+	</vbox>
+
+	<splitter collapse="before">
+		<wsplitterbutton />
+	</splitter>
+
+	<vbox flex="1">
+
+		<vbox flex="1">
+			<wtoolbar id="mainListToolbar" attachment="mainList" />
+			<wlist disablefilter="true" flex="1" id="mainList" attachment="leftTree" candrag="true" />
+			<wurlrewritingpanel id="mainList-urlrewriting" attachment="mainList" collapsed="true" />
+			<wpopup id="mainListPopup" attachment="mainList" debug="true" />
+		</vbox>
+
+		<wform id="moduleForm" attachment="mainList/editcomponent leftTree/editcomponent" />
+
+	</vbox>
+
+	<splitter collapse="after">
+		<wsplitterbutton />
+	</splitter>
+	<wmultitree width="210" id="rscTree" debug="true" candrag="true" hideheader="true" i18n:attributes="title &amp;modules.generic.backoffice.ResourcesTree;" />
+
+</hbox>

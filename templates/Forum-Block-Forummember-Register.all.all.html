@@ -1,0 +1,31 @@
+<h2>Enregistrement de l'utilisateur <strong tal:content="forummember/getUser/getFullname">Test Forum</strong></h2><br/>
+<form class="cmxform" method="post" action="" enctype="multipart/form-data">
+<ol>
+	<li>
+		<label for="field_pseudonym">Pseudonym <em>*</em></label>
+		<input type="text" class="textfield" name="forumParam[pseudonym]" id="field_pseudonym" size="50" maxlength="255" value="${forummember/getPseudonymAsHtml}" />	
+	</li>
+	
+	<li>
+		<label for="field_itemperpage">Message par page</label>
+		
+		<input tal:condition="php: forummember->getItemperpage() EQ 10" type="radio" id="field_itemperpage" name="forumParam[itemperpage]" value="10" checked="checked"/>
+		<input tal:condition="php: forummember->getItemperpage() != 10" type="radio" id="field_itemperpage" name="forumParam[itemperpage]" value="10" /><label for="field_itemperpage">10 </label>
+		
+		<input tal:condition="php: forummember->getItemperpage() EQ 20" type="radio" id="field_itemperpage_20" name="forumParam[itemperpage]" value="20" checked="checked"/>
+		<input tal:condition="php: forummember->getItemperpage() != 20" type="radio" id="field_itemperpage_20" name="forumParam[itemperpage]" value="20" /><label for="field_itemperpage_20">20 </label>
+		
+		<input tal:condition="php: forummember->getItemperpage() EQ 30" type="radio" id="field_itemperpage_30" name="forumParam[itemperpage]" value="30" checked="checked"/>
+		<input tal:condition="php: forummember->getItemperpage() != 30" type="radio" id="field_itemperpage_30" name="forumParam[itemperpage]" value="30" /><label for="field_itemperpage_20">30 </label>
+	</li>
+	
+	<li>
+		<label for="field_sign">Signature</label>
+		<textarea name="forumParam[sign]" class="jTagEditor" id="field_sign" cols="80" rows="5">${forummember/getSignAsInput}</textarea>
+	</li>
+		
+	<li class="button">
+		<input name="forumParam[submit]" type="submit" value="Enregistrer"/>
+	</li>
+</ol>
+</form>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<behaviour>
+<!--Added by builder-->
+<event type="select contextmenu" actions="createsection_" target="modules_forum_forum">
+	<actiongroup name="createsection_" icon="add" actions="createSection" />
+</event>
+
+<!--Added by builder-->
+<event type="select contextmenu" actions="" target="modules_forum_section">
+</event>
+
+<!--Added by builder-->
+<event type="select contextmenu" actions="" target="modules_forum_thread"/>
+
+<!--(Added by builder) components attribute value is coma separated module names (local or absolute)-->
+
+<datasource module="forum" components="forum section thread"/>
+	<columns>
+		<column ref="label" flex="7" label="Label" properties="type"/>
+	</columns>
+
+	<columns for-parent-type="modules_forum_forum">
+		<column ref="label" flex="2" label="Label" properties="type" />
+		<column ref="threadcount" flex="1" label="Threadcount" />
+		<column ref="postcount" flex="1" label="Postcount" />
+	</columns>
+	
+	<columns for-parent-type="modules_forum_section">
+		<column ref="label" flex="2" label="Label" properties="type" />
+		<column ref="postcount" flex="1" label="Postcount" />
+		<column ref="membername" flex="1" label="Membername" />
+	</columns>
+</behaviour>

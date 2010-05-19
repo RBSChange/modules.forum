@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/1.0.xsd" 
+    model-version="1.0" icon="user1"
+    publish-on-day-change="false">
+	
+	<properties>
+		<add name="user" type="modules_users/user" min-occurs="1"></add>
+		<add name="pseudonym" type="String" min-occurs="1"></add>
+		<add name="sign" type="LongString"></add>
+		<add name="postcount" type="Integer" default-value="0"></add>
+		<add name="threadcount" type="Integer" default-value="0"></add>
+		<add name="lastpostid" type="Integer"></add>
+		<add name="itemperpage" type="Integer" default-value="10"></add>
+	</properties>
+
+	<form>
+		<property name="postcount" display="readonly"/>
+		<property name="threadcount" display="readonly"/>
+		<property name="lastpostid" display="readonly"/>
+	</form>
+</document>

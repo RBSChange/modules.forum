@@ -1,0 +1,45 @@
+
+<p tal:condition="activationsend">Un email d'activation viens de vous etre envoyé.</p>
+<p tal:condition="activationerror">Une erreur a empeché l'activation de votre compte</p>
+<p tal:condition="activationsuccess">Votre compte à été activé.</p>
+
+<tal:block tal:condition="preferences/viewPrivateMemberInfos">
+	<tal:block tal:condition="exists: forummember/getUser/getTitle">
+	<dt><strong>Civilité</strong></dt>
+	<dl tal:content="forummember/getUser/getTitle/getLabelAsHtml" />
+	</tal:block>
+	
+	<dt><strong>Prénom</strong></dt>
+	<dl tal:content="forummember/getFirstnameAsHtml" />
+	
+	<dt><strong>Nom</strong></dt>
+	<dl tal:content="forummember/getLastnameAsHtml" />
+	
+	<dt><strong>Adresse e-mail</strong></dt>
+	<dl tal:content="forummember/getEmailAsHtml" />
+</tal:block>
+
+<dt><strong>Pseudonyme</strong></dt>
+<dl tal:content="forummember/getPseudonymAsHtml" />
+
+<dt><strong>Nombre de sujet</strong></dt>
+<dl tal:content="forummember/getThreadcount" />
+
+<dt><strong>Nombre de messages</strong></dt>
+<dl tal:content="forummember/getPostcount" />
+
+<dt><strong>Messages par page</strong></dt>
+<dl tal:content="forummember/getItemperpage" />
+
+<tal:block tal:condition="exists: forummember/getSign">
+<dt><strong>Signature</strong></dt>
+<dl tal:content="forummember/getSignAsHtml" />
+</tal:block>
+
+<dt><strong>Statut du compte</strong></dt>
+<dl tal:condition="forummember/isActif">Actif</dl>
+<dl tal:condition="forummember/activationNeeded">En attente d'activation</dl>
+<dl tal:condition="forummember/isLocked">Verrouillé</dl>
+
+<a tal:condition="preferences/canEditForumMember" change:link="document forummember;forumParam[action] 'edit'">Modifier</a>
+<a tal:condition="back" href="${back}"> Revenir à la liste</a>

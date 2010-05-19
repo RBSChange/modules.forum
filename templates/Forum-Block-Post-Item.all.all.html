@@ -1,0 +1,19 @@
+<li class="row-${odd}">
+	<!--
+	<hr/>
+	-->
+	<span tal:content="post/getIndexAsHtml">0</span>.
+ 
+	<strong tal:content="post/getLabelAsHtml">Label de la réponse</strong><br />
+	<span tal:content="post/getCreationdateAsHtml">le 10/9/2008 à 12:23:15</span>
+	
+	<a class="link forum-user" change:link="document post/getForummember; forumParam[action] 'view'; forumParam[back] preferences/getBackUrl" tal:content="post/getPseudonymAsHtml"></a>
+	<span tal:condition="preferences/canCreatePost"> | </span>
+	<a class="link quote-message" tal:condition="preferences/canCreatePost" change:link="tag contextual_website_website_modules_forum_post-detail;forumParam[thread] post/getThread/getId;forumParam[action] 'create';forumParam[message] post/getId" >Citer</a>
+	<span tal:condition="post/isEditable"> | </span>
+	<a class="link modify-message" tal:condition="post/isEditable" change:link="document post;forumParam[action] 'edit'" >Modifier</a>
+	
+	<div class="post-detail" tal:content="post/getTextAsHtml">Détail de la réponse</div>
+	<p tal:condition="post/getModifiedbyid" class="${post/getModifiedClassName}"><em>[modifié ${post/getModificationdateAsHtml} par ${post/getModifiedby/getPseudonymAsHtml}]</em></p>
+	<p tal:condition="post/getSign" class="sign" tal:content="post/getSignAsHtml">Signature</p>
+</li>

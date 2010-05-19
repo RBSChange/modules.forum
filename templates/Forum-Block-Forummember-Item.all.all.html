@@ -1,0 +1,15 @@
+<tr class="row-${odd}">
+	<td headers="pseudo" width="20%">
+		<a change:link="document forummember; forumParam[action] 'view'; forumParam[back] preferences/getBackUrl" tal:content="post/getPseudonymAsHtml"
+		tal:content="forummember/getPseudonymAsHtml">Pseudonyme</a></td>
+	<td headers="etat" width="20%">
+<span tal:condition="forummember/isActif">Actif</span>
+<span tal:condition="forummember/activationNeeded">En attente d'activation</span>
+<span tal:condition="forummember/isLocked">Verrouillé</span>
+</td>
+	<td headers="sujets" width="10%">${forummember/getThreadcount}</td>
+	<td headers="reponses" width="10%">${forummember/getPostcount}</td>
+	<td headers="derniere" class="text-align-left" width="40%">
+		<div tal:condition="forummember/getLastpostid" change:include="module 'forum'; template 'Forum-Block-Post-Thumbnail'; type 'html'; post forummember/getLastpost"></div>
+	</td>
+</tr>

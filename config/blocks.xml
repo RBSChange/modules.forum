@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<blocks>
+	<block type="modules_forum_forumcontextuallist" 
+		display="" icon="" 
+		label="&amp;modules.forum.bo.blocks.ForumContextualList;" />
+		
+	<block type="modules_forum_forum" 
+		display="" icon="" 
+		label="&amp;modules.forum.bo.blocks.Forum;" />
+		
+	<block type="modules_forum_forumlist" 
+		display="" icon="" hidden="true"
+		label="&amp;modules.forum.bo.blocks.ForumList;" />
+			
+	<block type="modules_forum_section" 
+		display="" icon="" 
+		label="&amp;modules.forum.bo.blocks.Section;" />
+	
+	<block type="modules_forum_thread" 
+		display="" icon="" 
+		label="&amp;modules.forum.bo.blocks.Thread;" />
+		
+	<block type="modules_forum_post" 
+		display="" icon="" 
+		label="&amp;modules.forum.bo.blocks.Post;" />
+		
+		
+	<block type="modules_forum_forummember" 
+		display="" icon="" 
+		label="&amp;modules.forum.bo.blocks.Forummember;" />
+		
+	<block type="modules_forum_forummemberlist" 
+		display="" icon="" 
+		label="&amp;modules.forum.bo.blocks.Forummemberlist;" />
+</blocks>

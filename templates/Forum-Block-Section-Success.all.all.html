@@ -1,0 +1,29 @@
+<div change:include="module 'forum'; template 'Forum-Block-Preferences-Header'; type 'html'; preferences preferences"/>
+<h1><a change:link="document forum" tal:content="forum/getLabelAsHtml">Titre du forum</a></h1>
+<h2 tal:content="section/getLabelAsHtml">Titre de la section</h2>
+ 
+<a tal:condition="preferences/canCreateThread"  change:link="tag contextual_website_website_modules_forum_thread-detail;forumParam[section] section/getId;forumParam[action] 'create'" >Nouveau sujet</a>
+
+ <p tal:condition="not: threadPaginator">Aucun sujet</p>
+ 
+ <tal:block tal:condition="threadPaginator">
+	 <span change:paginator="threadPaginator" tal:omit-tag=""/>
+	 <table class="normal" width="100%" cellpadding="0" cellspacing="0" summary="">
+	 	<caption><p tal:content="section/getDescriptionAsHtml">Description de la section</p></caption>
+	 	<thead>
+	 	<tr>
+	 		<th id="titre" class="text-align-left" colspan="2" width="50%"> Titre</th>
+			<th id="reponses" width="5%"> Réponses</th>
+			<th id="auteur" width="10%"> Auteur</th>
+	  		<th id="lectures" width="5%"> Lectures</th>
+	  		<th id="derniere-reponse" class="text-align-left" width="30%"> Dernière réponse</th> 
+	 	</tr>
+	 	</thead>
+	 	<tbody>
+	 	<tal:block tal:repeat="thread threadPaginator">
+	 		<div change:include="module 'forum'; template 'Forum-Block-Thread-Item'; type 'html'; thread thread; odd repeat/thread/odd" />
+	 	</tal:block>
+	 	</tbody>
+	 </table>
+	<span change:paginator="threadPaginator" tal:omit-tag=""/>
+</tal:block>

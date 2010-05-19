@@ -1,0 +1,6 @@
+<div change:include="module 'forum'; template 'Forum-Block-Preferences-Header'; type 'html'; preferences preferences"/>
+<ol class="forum-contextuallist" tal:condition="forums">
+	<li tal:repeat="forum forums" class="row-${repeat/forum/odd}">
+		<div change:include="module 'forum'; template 'Forum-Block-Forum-Item'; type 'html'; forum forum" />
+	</li>
+</ol>

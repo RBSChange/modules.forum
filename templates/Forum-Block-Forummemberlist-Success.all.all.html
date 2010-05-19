@@ -1,0 +1,20 @@
+<tal:block tal:condition="forummemberPaginator">
+	<div change:paginator="forummemberPaginator" />
+	 <table class="normal" cellpadding="0" cellspacing="0" width="100%" summary="">
+	 	<thead>
+	 	<tr>
+	 		<th id="pseudo" width="20%"> Pseudonyme</th>
+			<th id="etat" width="20%"> Etat</th>
+			<th id="sujets" width="10%"> Sujets</th>
+	  		<th id="reponses" width="10%"> Réponses</th>
+	  		<th id="derniere" class="text-align-left" width="40%"> Dernière réponse</th> 
+	 	</tr>
+	 	</thead>
+	 	<tbody>
+	 	<tal:block tal:repeat="forummember forummemberPaginator">
+	 		<div change:include="module 'forum'; template 'Forum-Block-Forummember-Item'; type 'html'; forummember forummember; preferences preferences; odd repeat/forummember/odd" />
+	 	</tal:block>
+	 	</tbody>
+	 </table>
+	<div change:paginator="forummemberPaginator" />
+</tal:block>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/1.0.xsd" 
+    model-version="1.0"
+	icon="document" publish-on-day-change="false" has-url="false">
+	<properties>
+		<add name="text" type="LongString" min-occurs="1"></add>
+		<add name="forummemberid" type="Integer" min-occurs="1"></add>
+		<add name="sign" type="LongString"></add>	
+		<add name="modifiedbyid" type="Integer"></add>	
+		<add name="locked" type="Boolean"></add>
+	</properties>
+
+	<form>
+		<property name="forummemberid" display="hidden"/>
+		<property name="modifiedbyid" display="hidden"/>
+	</form>
+</document>

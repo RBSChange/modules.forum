@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/notification/persistentdocument/import/notification_binding.xml" />
+	
+	<systemfolder module="notification" relatedmodule="forum">	
+		<notification codename="modules_forum/memberactivation"
+			label="Activation d'un membre"
+			availableparameters="{memberactivationurl}, {fullname}"
+			
+			subject="Activation de votre compte"
+			header="Processus d'activation du compte"
+			body="Bonjour {fullname},&lt;br/&gt;
+Voici le lien pour activer votre inscription :&lt;br/&gt;
+{memberactivationurl}"
+			footer="Cet e-mail a été généré automatiquement, merci de ne pas y répondre."
+			/>
+	</systemfolder>
+</script>

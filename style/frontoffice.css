@@ -1,0 +1,63 @@
+.header{
+	padding: 6px 0;
+	border-bottom: 1px solid silver;
+	margin-bottom: 24px;
+}
+table.normal dl dt{
+	font-weight: normal;
+	padding-left: 36px;
+	display: block;
+	color: #000;
+}
+ol.forum-contextuallist li{
+	padding: 6px 0;
+	border-bottom: 1px solid #ccc;
+}
+ol.forum-thread li{
+	padding: 6px 0;
+	margin-top: 12px;
+	margin-bottom: 24px;
+	width: 100%;
+}
+.post-detail{
+	padding: 6px 0;
+}
+p.sign{
+	padding: 6px 0;
+	border-top: 1px solid #ccc;
+	font-size: smaller;
+}
+.new-message{
+	float: right;
+	margin: 0;
+}
+ol.forum-thread li.row-0{
+	background: #f0f0f0;
+}
+a.link.forum-login,a.link.forum-logout,a.link.members-list,a.link.modify-profile,a.link.new-message,a.link.forum-user,a.link.quote-message,a.link.modify-message{
+	padding-left: 20px;
+}
+a.link.forum-login{
+	background: url(/changeicons/small/lock.png) no-repeat;
+}
+a.link.forum-logout{
+	background: url(/changeicons/small/lock_open.png) no-repeat;
+}
+a.link.members-list{
+	background: url(/changeicons/small/users4.png) no-repeat;
+}
+a.link.modify-profile{
+	background: url(/changeicons/small/user1_edit.png) no-repeat;
+}
+a.link.new-message{
+	background: url(/changeicons/small/document_new.png) no-repeat;
+}
+a.link.forum-user{
+	background: url(/changeicons/small/user1.png) no-repeat;
+}
+a.link.quote-message{
+	background: url(/changeicons/small/message_edit.png) no-repeat;
+}
+a.link.modify-message{
+	background: url(/changeicons/small/edit.png) no-repeat;
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+    <entity id="document-name">
+		<locale lang="fr">Membre du forum</locale>
+		<locale lang="en">Forum member</locale>
+	</entity>
+	
+  <entity id="edition-form-title">
+    <locale lang="fr">propriétés du membre du forum</locale>
+    <locale lang="en">forum member properties</locale>
+  </entity>
+  
+  <entity id="label">
+    <locale lang="fr">Libellé</locale>
+    <locale lang="en">label</locale>
+  </entity>
+  <entity id="label-help">
+    <locale lang="fr">Libellé</locale>
+    <locale lang="en">label</locale>
+  </entity>
+
+  <entity id="user">
+    <locale lang="fr">Utilisateur Change</locale>
+    <locale lang="en">Change user</locale>
+  </entity>
+  <entity id="user-help">
+    <locale lang="fr">Utilisateur Change</locale>
+    <locale lang="en">Change user</locale>
+  </entity>
+  
+  <entity id="pseudonym">
+    <locale lang="fr">Pseudonyme</locale>
+    <locale lang="en">pseudonym</locale>
+  </entity>
+  <entity id="pseudonym-help">
+    <locale lang="fr">Nom utilisé sur le site web</locale>
+    <locale lang="en">Name used on the site</locale>
+  </entity>
+  
+  <entity id="sign">
+    <locale lang="fr">Signature</locale>
+    <locale lang="en">sign</locale>
+  </entity>
+  <entity id="sign-help">
+    <locale lang="fr">Signature</locale>
+    <locale lang="en">sign</locale>
+  </entity>
+</localization>

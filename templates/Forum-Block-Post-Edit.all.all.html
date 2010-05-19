@@ -1,0 +1,34 @@
+<h1><a change:link="document forum" tal:content="forum/getLabelAsHtml">Titre du forum</a></h1>
+<h2><a change:link="document section" tal:content="section/getLabelAsHtml">Titre de la section</a></h2>
+<h3><a change:link="document thread" tal:content="thread/getLabelAsHtml">Sujet</a></h3>
+<ol tal:condition="errors">
+	<li tal:repeat="error errors" tal:content="error">Erreur</li> 
+</ol>
+
+<div tal:condition="preview">
+	<hr/>
+	Sujet : ${post/getLabelAsHtml} <br/>
+	Description : ${post/getTextAsHtml}
+	<hr/>
+</div>
+
+<form class="cmxform" method="post" action="" enctype="multipart/form-data">
+	<input type="hidden" name="forumParam[thread]" value="${thread/getId}"/>
+	<ol>
+		<li>
+	<label for="field_label">Sujet <em>*</em></label>
+	<input type="text" class="textfield" name="forumParam[label]" id="field_label" size="50" maxlength="255" value="${post/getLabelAsHtml}" />	
+		</li>
+		<li>
+	<label for="field_text">Description</label>
+	
+	<textarea name="forumParam[text]" class="jTagEditor" id="field_text" cols="80" rows="10">${post/getTextAsInput}</textarea>
+		</li>
+	</ol>
+	
+	<p style="clear: both">
+		<input type="submit" class="button submit" name="forumParam[preview]" value="Prévisualiser"/>
+		<input type="submit" class="button submit" name="forumParam[modify]" value="Modifier"/>
+		<a change:link="document thread;forumParam[post] post/getId">Retourner au sujet</a>
+	</p>
+</form>

@@ -1,0 +1,13 @@
+<a tal:condition="not: preferences/isAuthenticated" 
+	change:link="tag contextual_website_website_modules_forum_forummember-detail;forumParam[action] 'autenthicate';forumParam[back] preferences/getBackUrl">S'identifier</a>
+	
+<tal:block tal:condition="preferences/isAuthenticated">
+ ${preferences/getPseudonym} - <a change:link="tag contextual_website_website_modules_forum_forummember-detail;forumParam[action] 'logout';forumParam[back] preferences/getBackUrl">Déconnexion</a>	
+</tal:block>
+<br />
+
+<ol tal:condition="forums">
+	<li tal:repeat="forum forums" class="row-${repeat/forum/odd}">
+		<div change:include="module 'forum'; template 'Forum-Block-Forum-Item'; type 'html'; forum forum" />
+	</li>
+</ol>

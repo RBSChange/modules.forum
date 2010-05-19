@@ -1,0 +1,67 @@
+<h2>Créer votre compte membre </h2><br/>
+<form class="cmxform" method="post" action="" enctype="multipart/form-data">
+<ol tal:condition="errors">
+	<li tal:repeat="error errors" tal:content="error">Erreur</li> 
+</ol>
+
+<ol>
+
+	<li>
+		<label for="field_login">Identifiant <em>*</em></label>
+		<input name="forumParam[login]" id="field_login" type="text" maxlength="100" value="${forummember/getLoginAsHtml}"/>
+	</li>
+	<li>
+		<label for="field_memberpwd">Mot de passe <em>*</em></label>
+		<input name="forumParam[memberpwd]" id="field_memberpwd" type="password" maxlength="20"/>
+	</li>	
+	
+	<li>
+		<label for="field_memberpwdconfirm">Confirmer le mot de passe <em>*</em></label>
+		<input name="forumParam[memberpwdconfirm]" id="field_memberpwdconfirm" type="password" maxlength="20"/>
+	</li>	
+	
+	<li>
+		<label for="field_title" change:translate="&modules.users.frontoffice.editprofil.Title;">Civilité</label>
+		<span change:select="name 'forumParam[title]'; listId 'modules_users/title'; defaultValue forummember/getUser/getTitle/getId" />
+	</li>
+	<li>
+		<label for="field_firstname">Prénom <em>*</em></label>
+		<input name="forumParam[firstname]" id="field_firstname" type="text" maxlength="50" value="${forummember/getFirstnameAsHtml}"/>
+	</li>
+	<li>
+		<label for="field_lastname">Nom <em>*</em></label>
+		<input name="forumParam[lastname]" id="field_lastname" type="text" maxlength="50" value="${forummember/getLastnameAsHtml}"/>
+	</li>
+	<li>
+		<label for="field_email">Adresse e-mail <em>*</em></label>
+		<input name="forumParam[email]" id="field_email" type="text" maxlength="100" value="${forummember/getEmailAsHtml}"/>
+	</li>
+	
+	<li>
+		<label for="field_pseudonym">Pseudonyme <em>*</em></label>
+		<input type="text" class="textfield" name="forumParam[pseudonym]" id="field_pseudonym" size="50" maxlength="255" value="${forummember/getPseudonymAsHtml}" />	
+	</li>
+	
+	<li>
+		<label for="field_itemperpage">Messages par page</label>
+		
+		<input tal:condition="php: forummember->getItemperpage() EQ 10" type="radio" id="field_itemperpage" name="forumParam[itemperpage]" value="10" checked="checked"/>
+		<input tal:condition="php: forummember->getItemperpage() != 10" type="radio" id="field_itemperpage" name="forumParam[itemperpage]" value="10" /><label for="field_itemperpage">10&nbsp;</label>
+		
+		<input tal:condition="php: forummember->getItemperpage() EQ 20" type="radio" id="field_itemperpage_20" name="forumParam[itemperpage]" value="20" checked="checked"/>
+		<input tal:condition="php: forummember->getItemperpage() != 20" type="radio" id="field_itemperpage_20" name="forumParam[itemperpage]" value="20" /><label for="field_itemperpage_20">20&nbsp;</label>
+		
+		<input tal:condition="php: forummember->getItemperpage() EQ 30" type="radio" id="field_itemperpage_30" name="forumParam[itemperpage]" value="30" checked="checked"/>
+		<input tal:condition="php: forummember->getItemperpage() != 30" type="radio" id="field_itemperpage_30" name="forumParam[itemperpage]" value="30" /><label for="field_itemperpage_20">30&nbsp;</label>
+	</li>
+	
+	<li>
+		<label for="field_sign">Signature</label>
+		<textarea name="forumParam[sign]" class="jTagEditor" id="field_sign" cols="50" rows="10">${forummember/getSignAsInput}</textarea>
+	</li>
+
+	<li class="button">
+		<input name="forumParam[create]" type="submit" value="Créer"/>
+	</li>
+</ol>
+</form>

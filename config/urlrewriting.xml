@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlrewriting>
+	<rules>
+		<rule documentModel="forum" viewMode="detail">
+			<template>/forum/$forumLabel-$lang,$id</template>
+			<parameters>
+				<parameter name="forumLabel"  method="getLabel" />
+			</parameters>
+		</rule>
+		
+		<rule documentModel="section" viewMode="detail">
+			<template>/forum/$forumLabel/$sectionLabel-$lang,$id</template>
+			<parameters>
+				<parameter name="forumLabel"  method="getForumLabel" />
+				<parameter name="sectionLabel"  method="getLabel" />
+			</parameters>
+		</rule>
+		
+		<rule documentModel="thread" viewMode="detail">
+			<template>/forum/$forumLabel/$sectionLabel/$threadLabel-$lang,$id</template>
+			<parameters>
+				<parameter name="forumLabel"  method="getForumLabel" />
+				<parameter name="sectionLabel"  method="getSectionLabel" />
+				<parameter name="threadLabel"  method="getLabel" />
+			</parameters>
+		</rule>
+		
+		<rule documentModel="forummember" viewMode="detail">
+			<template>/forum/member/$forummemberLabel-$lang,$id</template>
+			<parameters>
+				<parameter name="forummemberLabel"  method="getPseudonym" />
+			</parameters>
+		</rule>
+	</rules>
+</urlrewriting>

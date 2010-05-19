@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+	<entity id="module-name">
+		<locale lang="fr">forum</locale>
+		<locale lang="en">forum</locale>
+	</entity>
+
+	<entity id="tree-root-name">
+		<locale lang="fr">forum</locale>
+		<locale lang="en">forum</locale>
+	</entity>
+
+	<entity id="system-folder-name">
+		<locale lang="fr">forum</locale>
+		<locale lang="en">forum</locale>
+	</entity>
+</localization>

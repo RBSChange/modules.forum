@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/forum/persistentdocument/import/forum_binding.xml" />
+	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
+
+	<website byTag="default_modules_website_default-website" template="tplTwo">
+		<topic label="Liste des forums de discussion" id="forums" byLabel="Liste des forums de discussion">
+			<page label="Liste des forums" isIndexPage="true" indexingstatus="false">
+				<tag name="functional_forum_forum-list" />
+				<changecontent for="content-block">
+					<changeblock type="modules_forum_forumcontextuallist" />
+				</changecontent>
+			</page>
+
+			<page label="Forum" navigationVisibility="hidden" indexingstatus="false">
+				<tag name="functional_forum_forum-detail" />
+				<changecontent for="content-block">
+					<changeblock type="modules_forum_forum" />
+				</changecontent>
+			</page>
+			
+			<page label="Section" navigationVisibility="hidden" indexingstatus="false">
+				<tag name="contextual_website_website_modules_forum_section-detail" />
+				<changecontent for="content-block">
+					<changeblock type="modules_forum_section" />
+				</changecontent>
+			</page>
+			
+			<page label="Sujet" navigationVisibility="hidden" indexingstatus="false">
+				<tag name="contextual_website_website_modules_forum_thread-detail" />
+				<changecontent for="content-block">
+					<changeblock type="modules_forum_thread" />
+				</changecontent>
+			</page>
+			
+			<page label="Message" navigationVisibility="hidden" indexingstatus="false">
+				<tag name="contextual_website_website_modules_forum_post-detail" />
+				<changecontent for="content-block">
+					<changeblock type="modules_forum_post" />
+				</changecontent>
+			</page>
+			
+			<page label="Membre" navigationVisibility="hidden" indexingstatus="false">
+				<tag name="contextual_website_website_modules_forum_forummember-detail" />
+				<changecontent for="content-block">
+					<changeblock type="modules_forum_forummember" />
+				</changecontent>
+			</page>
+			
+			<page label="Liste des Membres" navigationVisibility="hidden" indexingstatus="false">
+				<tag name="contextual_website_website_modules_forum_forummember-list" />
+				<changecontent for="content-block">
+					<changeblock type="modules_forum_forummemberlist" />
+				</changecontent>
+			</page>
+			
+		</topic>
+	</website>
+
+	<rootfolder module="forum">
+		<forummember 
+			pseudonym="Adibou" id="f1" sign="La vie est un long fleuve tranquille."
+			firstname="Adibou" lastname="Forum Testeur" email="testforum@rbs.fr"
+			login="adibou" password="abcd123"
+		/>
+		
+		<forummember 
+			pseudonym="Tagada" id="f2" sign="Quand y pleut y fait pas beau."
+			firstname="Tagada" lastname="Forum Testeur" email="testforum@rbs.fr"
+			login="tagada" password="abcd123"
+		/>
+		
+		<linkedtopic refid="forums">
+			<forum label="Discutons" description="Discussions en générale">
+				<section label="BlaBla général" description="Discutons de tout et de rien">
+					<thread forummemberid-ref="f1" label="In hac habitasse platea dictumst" text="Morbi ac nisl. Pellentesque erat. Proin scelerisque justo ut odio! Praesent sodales, est eget suscipit vulputate, mi arcu pulvinar augue, ac ultrices ante nulla in tellus? Vivamus velit est, adipiscing in, tincidunt sed, consequat non, nisl. In auctor molestie orci. Proin eget diam. Quisque quam nisi, suscipit a, fringilla ut, pellentesque in, purus." >
+						<post forummemberid-ref="f2" label="Morbi ac nisl. Pellentesque" text=" Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque."/>
+						<post forummemberid-ref="f2" label="Morbi ac nisl. Pellentesque" text=" Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque."/>
+						<post forummemberid-ref="f2" label="Morbi ac nisl. Pellentesque" text=" Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque."/>
+						<post forummemberid-ref="f1" label="Suspendisse diam mauris, tincidunt in" text=" Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque."/>
+						<post forummemberid-ref="f2" label="Morbi ac nisl. Pellentesque" text=" Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque."/>
+						<post forummemberid-ref="f1" label="Suspendisse diam mauris, tincidunt in" text=" Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque."/>
+						<post forummemberid-ref="f2" label="Morbi ac nisl. Pellentesque" text=" Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque."/>
+						<post forummemberid-ref="f2" label="Morbi ac nisl. Pellentesque" text=" Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque."/>
+						<post forummemberid-ref="f2" label="Morbi ac nisl. Pellentesque" text=" Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque."/>
+						<post forummemberid-ref="f2" label="Morbi ac nisl. Pellentesque" text=" Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque."/>
+						<post forummemberid-ref="f2" label="Morbi ac nisl. Pellentesque" text=" Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque."/>
+						<post forummemberid-ref="f2" label="Morbi ac nisl. Pellentesque" text=" Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque."/>
+						<post forummemberid-ref="f2" label="Morbi ac nisl. Pellentesque" text=" Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque."/>
+						<post forummemberid-ref="f2" label="Morbi ac nisl. Pellentesque" text=" Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque."/>
+						<post forummemberid-ref="f2" label="Morbi ac nisl. Pellentesque" text=" Pellentesque nisl urna, lacinia eget, sagittis nec, pharetra eu, lectus? Proin pellentesque, ante at sodales egestas; pede est laoreet quam, a posuere lorem diam id neque."/>
+					</thread>
+				</section>
+				<section label="Présentation" description="C'est ici que les nouveaux arrivants sont invités à se présenter">
+
+				</section>
+				<section label="News du Forum" description="Ici vous seront présenté, les nouveautés, les améliorations, les maintenances">
+
+				</section>
+				<section label="Boîte à idées - Vos suggestions" description="Déposez ici vos idées de forums, sujets, rubriques, catégories ... Afin de faire avancer le forum dans votre sens">
+
+				</section>
+			</forum>
+		</linkedtopic>
+	</rootfolder>
+</script>

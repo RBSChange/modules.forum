@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
+	<binding name="forum" className="forum_ForumScriptDocumentElement" />
+	<binding name="section" className="forum_SectionScriptDocumentElement" />
+	<binding name="thread" className="forum_ThreadScriptDocumentElement" />
+	<binding name="post" className="forum_PostScriptDocumentElement" />
+	<binding name="forummember" className="forum_ForummemberScriptDocumentElement" />
+	<binding name="linkedtopic" className="forum_LinkedtopicScriptDocumentElement" />
+	
+	<binding name="message" className="forum_MessageScriptDocumentElement" />
+</script>

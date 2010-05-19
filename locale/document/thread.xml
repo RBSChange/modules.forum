@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+	<entity id="document-name">
+		<locale lang="fr">Sujet</locale>
+		<locale lang="en">Thread</locale>
+	</entity>
+	<entity id="edition-form-title">
+		<locale lang="fr">Propriétés d'un sujet</locale>
+		<locale lang="en">Thread properties</locale>
+	</entity>
+
+	<entity id="label">
+		<locale lang="fr">Sujet</locale>
+		<locale lang="en">Thread</locale>
+	</entity>
+	<entity id="label-help">
+		<locale lang="fr">Sujet</locale>
+		<locale lang="en">Thread</locale>
+	</entity>
+	<entity id="text">
+		<locale lang="fr">texte</locale>
+		<locale lang="en">text</locale>
+	</entity>
+	<entity id="text-help">
+		<locale lang="fr">Texte du sujet</locale>
+		<locale lang="en">thread content</locale>
+	</entity>
+	<entity id="forummemberid">
+		<locale lang="fr">Identifiant du membre</locale>
+		<locale lang="en">forummemberid</locale>
+	</entity>
+	<entity id="forummemberid-help">
+		<locale lang="fr">Identifiant du membre créateur du sujet</locale>
+	</entity>
+	<entity id="pseudonym">
+		<locale lang="fr">pseudonyme</locale>
+		<locale lang="en">pseudonym</locale>
+	</entity>
+	<entity id="pseudonym-help">
+		<locale lang="fr">pseudonyme</locale>
+		<locale lang="en">pseudonym</locale>
+	</entity>
+	<entity id="section">
+		<locale lang="fr">section</locale>
+		<locale lang="en">section</locale>
+	</entity>
+	<entity id="section-help">
+		<locale lang="fr">Permet de changer le sujet de section</locale>
+	</entity>
+</localization>

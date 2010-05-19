@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rights>
+	<actions>
+		<action name="Read" />	
+		<action name="Write" />
+		<action name="Moderate" />
+		
+		<document name="rootfolder" />
+		
+		<document name="forum">
+			<action name="Insert" back-office-name="createForum"/>
+		</document>
+		<document name="section">
+			<action name="Insert" back-office-name="createSection"/>
+		</document>
+		<document name="thread">
+			<action name="Insert" back-office-name="createThread"/>
+		</document>		
+		<document name="post" />		
+		<document name="forummember" />
+		
+		<document name="topic" />
+		<action name="GetDialogTopicTree" back-office-name="addTopic" />
+	</actions>
+
+	<roles>	
+		<role name="Admin">
+			<permission name="*" />
+			<permission name="LoadPermissions.*" />
+			<permission name="SavePermissions.*" />
+			<permission name="GetPreferencesDocument" />
+			<permission name="Move.*" />
+			<permission name="GetDialogTopicTree" />
+			<permission name="Remove.topic" />
+			<permission name="EditLocale"/>
+		</role>
+		
+		<role name="Writer" extend="User">
+			<permission name="Enabled" />
+			<permission name="Order" />
+			<permission name="Load.*" />
+			<permission name="Rename.*" />
+			<permission name="PutInTrash.*" />
+			<permission name="Delete.*" />
+			<permission name="Insert.*" />
+			<permission name="Update.*" />
+		</role>
+		
+		<role name="Translator" extend="User">
+			<permission name="Enabled" />	
+			<permission name="LoadForTranslation.*" />
+			<permission name="UpdateTranslation.*" />
+		</role>
+		
+		<role name="Validator" extend="User">
+			<permission name="Enabled" />
+			<permission name="Activate.*" />
+			<permission name="Cancel.*" />		
+		</role>
+		
+		<role name="User">
+			<permission name="List.*" />
+		</role>
+		
+		<frontendrole name="Member">
+			<permission name="Write" />
+			<permission name="Read" />
+		</frontendrole>
+		
+		<frontendrole name="Moderator">
+			<permission name="Write" />
+			<permission name="Read" />
+			<permission name="Moderate" />
+		</frontendrole>
+	</roles>
+</rights>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<actions extends="generic">
+  <action name="createForum" label="&amp;modules.forum.bo.actions.Create-Forum;" icon="add">
+    <parameter name="listWidget"/>
+    <body><![CDATA[this.createDocument(listWidget, this.name, 'forum', 'moduleForm');]]></body>
+  </action>
+  <action name="createSection" label="&amp;modules.forum.bo.actions.Create-Section;" icon="add">
+    <parameter name="listWidget"/>
+    <body><![CDATA[this.createDocument(listWidget, this.name, 'section', 'moduleForm');]]></body>
+  </action>
+  <action name="createThread" label="&amp;modules.forum.bo.actions.Create-Thread;" icon="add">
+    <parameter name="listWidget"/>
+    <body><![CDATA[this.createDocument(listWidget, this.name, 'thread', 'moduleForm');]]></body>
+  </action>
+  <action name="createPost" label="&amp;modules.forum.bo.actions.Create-Post;">
+    <parameter name="listWidget"/>
+    <body><![CDATA[this.createDocument(listWidget, this.name, 'post', 'moduleForm');]]></body>
+  </action>
+  <action name="createForummember" label="&amp;modules.forum.bo.actions.Create-Forummember;">
+    <parameter name="listWidget"/>
+    <body><![CDATA[this.createDocument(listWidget, this.name, 'forummember', 'moduleForm');]]></body>
+  </action>
+</actions>

@@ -1,0 +1,12 @@
+<h1><a change:link="document forum" tal:content="forum/getLabelAsHtml">Titre du forum</a></h1>
+<h2><a change:link="document section" tal:content="section/getLabelAsHtml">Titre de la section</a></h2>
+<h3><a change:link="document thread" tal:content="thread/getLabelAsHtml">Sujet</a></h3>
+
+<span tal:content="post/getIndexAsHtml">0</span>. <strong tal:content="post/getLabelAsHtml">Label de la réponse</strong> 
+<span tal:content="post/getCreationdateAsHtml">le 10/9/2008 à 12:23:15</span>
+<span tal:content="post/getPseudonymAsHtml">Pseudonym</span>
+
+<p tal:content="post/getTextAsHtml">Détail de la réponse</p>
+<p tal:condition="post/getSign" class="sign" tal:content="post/getSignAsHtml">Signature</p>
+
+<a change:link="document thread;forumParam[post] post/getId">Retourner au sujet</a>

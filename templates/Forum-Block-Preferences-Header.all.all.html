@@ -1,0 +1,11 @@
+<div class="header">
+<a class="link forum-login" tal:condition="not: preferences/isAuthenticated" 
+	change:link="tag contextual_website_website_modules_forum_forummember-detail;forumParam[action] 'autenthicate';forumParam[back] preferences/getBackUrl">S'identifier</a>
+<tal:block tal:condition="preferences/isAuthenticated">
+ ${preferences/getPseudonym} - <a class="link forum-logout" change:link="document preferences/getForummember;forumParam[action] 'logout';forumParam[back] preferences/getBackUrl">Déconnexion</a>
+<span> | </span>
+<a class="link modify-profile" change:link="document preferences/getForummember;forumParam[action] 'edit'">Modifier le profil</a>
+<span> | </span>
+<a class="link members-list" change:link="tag contextual_website_website_modules_forum_forummember-list">Liste des membres</a>		
+</tal:block>
+</div>

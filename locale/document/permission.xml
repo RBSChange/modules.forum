@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+
+  <entity id="edition-form-title">
+    <locale lang="fr">gestion des droits</locale>
+    <locale lang="en">right management</locale>
+  </entity>
+
+  <entity id="Admin">
+    <locale lang="fr">Administrateur</locale>
+    <locale lang="en">Administrator</locale>
+  </entity>
+  <entity id="Admin-help">
+    <locale lang="fr">Administrateur</locale>
+    <locale lang="en">Administrator</locale>
+  </entity>
+  <entity id="Writer">
+    <locale lang="fr">Rédacteur</locale>
+    <locale lang="en">Writer</locale>
+  </entity>
+  <entity id="Writer-help">
+    <locale lang="fr">Rédacteur</locale>
+    <locale lang="en">Writer</locale>
+  </entity>
+  <entity id="Translator">
+    <locale lang="fr">Traducteur</locale>
+    <locale lang="en">Translator</locale>
+  </entity>
+  <entity id="Translator-help">
+    <locale lang="fr">Traducteur</locale>
+    <locale lang="en">Translator</locale>
+  </entity>
+  <entity id="Validator">
+    <locale lang="fr">Validateur</locale>
+    <locale lang="en">Validator</locale>
+  </entity>
+  <entity id="Validator-help">
+    <locale lang="fr">Validateur du contenu avant publication</locale>
+    <locale lang="en">Validator</locale>
+  </entity>
+  <entity id="User">
+    <locale lang="fr">Utilisateur</locale>
+    <locale lang="en">User</locale>
+  </entity>
+  <entity id="User-help">
+    <locale lang="fr">Utilisateur</locale>
+    <locale lang="en">User</locale>
+  </entity>
+    <entity id="Admin">
+    <locale lang="fr">Administrateur</locale>
+    <locale lang="en">Administrator</locale>
+  </entity>
+	<entity id="Member">
+		<locale lang="fr">Membre</locale>
+		<locale lang="en">Member</locale>
+	</entity>
+
+	<entity id="Member-help">
+		<locale lang="fr">Indiquer les membres ayant accès</locale>
+		<locale lang="en">Indicates membres witch have access</locale>
+	</entity>
+
+	<entity id="Moderator">
+		<locale lang="fr">Modérateur</locale>
+		<locale lang="en">Moderator</locale>
+	</entity>
+
+	<entity id="Moderator-help">
+		<locale lang="fr">Indiquer les membres ayant accès</locale>
+		<locale lang="en">Indicates moderator witch have access</locale>
+	</entity>
+	
+	<entity id="Permission-panel-1">
+		<locale lang="fr">Onglet 1</locale>
+		<locale lang="fr">Tab 1</locale>
+	</entity>
+	
+	<entity id="Permission-panel-2">
+		<locale lang="fr">Onglet 2</locale>
+		<locale lang="fr">Tab 2</locale>
+	</entity>
+	
+</localization>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tags extends="generic">
+  <tag label="&amp;modules.forum.bo.tags.forum-list;" icon="link">functional_forum_forum-list</tag>
+  <tag label="&amp;modules.forum.bo.tags.forum-detail;" icon="link">functional_forum_forum-detail</tag>
+  
+  <tag label="&amp;modules.forum.bo.tags.section-detail;" icon="link">contextual_website_website_modules_forum_section-detail</tag>
+  <tag label="&amp;modules.forum.bo.tags.thread-detail;" icon="link">contextual_website_website_modules_forum_thread-detail</tag>
+  <tag label="&amp;modules.forum.bo.tags.post-detail;" icon="link">contextual_website_website_modules_forum_post-detail</tag>
+  <tag label="&amp;modules.forum.bo.tags.forummember-detail;" icon="link">contextual_website_website_modules_forum_forummember-detail</tag>
+  <tag label="&amp;modules.forum.bo.tags.forummember-list;" icon="link">contextual_website_website_modules_forum_forummember-list</tag>
+</tags>

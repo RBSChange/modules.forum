@@ -1,0 +1,18 @@
+treechildren::-moz-tree-image(modules_forum_forum){
+	list-style-image: url(/changeicons/small/wactionscript.png) ;
+}
+treechildren::-moz-tree-image(modules_forum_section){
+	list-style-image: url(/changeicons/small/folder_document.png) ;
+}
+treechildren::-moz-tree-image(modules_forum_message){
+	list-style-image: url(/changeicons/small/document.png) ;
+}
+treechildren::-moz-tree-image(modules_forum_thread){
+	list-style-image: url(/changeicons/small/documents.png) ;
+}
+treechildren::-moz-tree-image(modules_forum_post){
+	list-style-image: url(/changeicons/small/document.png) ;
+}
+treechildren::-moz-tree-image(modules_forum_forummember){
+	list-style-image: url(/changeicons/small/user1.png) ;
+}

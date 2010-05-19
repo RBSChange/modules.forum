@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/1.0.xsd" 
+    model-version="1.0"
+	extend="modules_forum/message" indexable="true" has-url="true"
+	icon="documents" >
+	<properties>
+		<add name="section" type="modules_forum/section" min-occurs="1" inverse="true" tree-node="inverse"></add>
+		<add name="postcount" type="Integer" default-value="0"></add>
+		<add name="readcount" type="Integer" default-value="0"></add>
+		<add name="lastpostid" type="Integer"></add>
+	</properties>
+
+	<form>
+		<property name="postcount" display="readonly"/>
+		<property name="readcount" display="readonly"/>
+		<property name="lastpostid" display="hidden"/>
+		<property name="section" display="hidden"/>	
+	</form>
+</document>

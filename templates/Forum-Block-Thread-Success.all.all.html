@@ -1,0 +1,54 @@
+<div change:include="module 'forum'; template 'Forum-Block-Preferences-Header'; type 'html'; preferences preferences"/>
+<h1><a change:link="document forum" tal:content="forum/getLabelAsHtml">Titre du forum</a></h1>
+<h2><a change:link="document section" tal:content="section/getLabelAsHtml">Titre de la section</a></h2>
+<h3><strong tal:content="thread/getLabelAsHtml">Label du Sujet</strong></h3>
+
+<div class="new-message">
+	<a class="link new-message" tal:condition="preferences/canCreatePost" change:link="tag contextual_website_website_modules_forum_post-detail;forumParam[thread] thread/getId;forumParam[action] 'create'" >Nouveau message</a>
+</div>
+
+<tal:block tal:condition="postPaginator">
+<div change:paginator="postPaginator" />
+
+	
+	<ol class="forum-thread">
+	 	<li class="thread" tal:condition="beginThread">
+	 		<strong tal:content="thread/getLabelAsHtml">Label du Sujet</strong>
+	 		<br />
+	 		<span tal:content="thread/getCreationdateAsHtml">le 10/9/2008 à 12:23:15</span>
+	 		
+			<a class="link forum-user" change:link="document thread/getForummember;forumParam[action] 'view'; forumParam[back] preferences/getBackUrl" tal:content="thread/getPseudonymAsHtml"></a>
+			<span tal:condition="preferences/canEditThread"> | </span>
+			<a class="link modify-message" tal:condition="preferences/canEditThread" change:link="document thread; forumParam[action] 'edit'">Modifier</a>
+			
+			<div class="post-detail" tal:content="thread/getTextAsHtml">Détail de la réponse</div>
+			<p tal:condition="thread/getModifiedbyid" class="${thread/getModifiedClassName}"><em>[modifié ${thread/getModificationdateAsHtml} par ${thread/getModifiedby/getPseudonymAsHtml}]</em></p>
+			<p tal:condition="thread/getSign" class="sign" tal:content="thread/getSignAsHtml">Signature</p>	
+			
+	 	</li>
+	 	<tal:block tal:repeat="post postPaginator">
+	 		<div change:include="module 'forum'; template 'Forum-Block-Post-Item'; type 'html'; post post; preferences preferences; odd repeat/post/odd" />
+	 	</tal:block>
+	</ol>
+	<div change:paginator="postPaginator" />
+<div class="new-message">
+	<a class="link new-message" tal:condition="preferences/canCreatePost" change:link="tag contextual_website_website_modules_forum_post-detail;forumParam[thread] thread/getId;forumParam[action] 'create'" >Nouveau message</a>
+</div>
+	</tal:block>
+
+<tal:block tal:condition="not: postPaginator">
+	<ol class="forum-thread">
+	 	<li class="thread">
+			<strong tal:content="thread/getLabelAsHtml">Label du Sujet</strong><br />
+			<span tal:content="thread/getCreationdateAsHtml">le 10/9/2008 à 12:23:15</span>
+			
+			<a class="link forum-user" change:link="document thread/getForummember;forumParam[action] 'view'; forumParam[back] preferences/getBackUrl" tal:content="thread/getPseudonymAsHtml"></a>
+			<span tal:condition="preferences/canEditThread"> | </span>
+			<a class="link modify-message" tal:condition="preferences/canEditThread" change:link="document thread; forumParam[action] 'edit'">Modifier</a>
+			 
+			<div class="post-detail" tal:content="thread/getTextAsHtml">Détail de la réponse</div>
+			<p tal:condition="thread/getModifiedbyid" class="${thread/getModifiedClassName}"><em>[modifié ${thread/getModificationdateAsHtml} par ${thread/getModifiedby/getPseudonymAsHtml}]</em></p>
+			<p tal:condition="thread/getSign" class="sign" tal:content="thread/getSignAsHtml">Signature</p>	
+	 	</li>
+	</ol>
+</tal:block>
