@@ -4,19 +4,19 @@
   <type>change-module</type>
   <license>os</license>
   <repository>private</repository>
-  <version>3.0.2</version>
+  <version>3.0.3</version>
   <description>Forum</description>
   <dependencies>
     <dependency>
       <name>change-lib/framework</name>
       <versions>
-        <version>3.0.2</version>
+        <version>3.0.3</version>
       </versions>
     </dependency>
     <dependency>
       <name>change-module/generic</name>
       <versions>
-        <version>3.0.2</version>
+        <version>3.0.3</version>
       </versions>
     </dependency>
   </dependencies>
