@@ -3,7 +3,7 @@
 	<binding fileName="modules/forum/persistentdocument/import/forum_binding.xml" />
 	<binding fileName="modules/website/persistentdocument/import/website_binding.xml" />
 
-	<website byTag="default_modules_website_default-website" template="tplTwo">
+	<website byTag="default_modules_website_default-website" template="webfactory/tplTwo">
 		<topic label="Liste des forums de discussion" id="forums" byLabel="Liste des forums de discussion">
 			<page label="Liste des forums" isIndexPage="true" indexingstatus="false">
 				<tag name="functional_forum_forum-list" />
