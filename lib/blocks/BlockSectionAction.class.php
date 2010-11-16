@@ -30,7 +30,7 @@ class forum_BlockSectionAction extends forum_BlockBaseAction
 			$nbItemPerPage = $preferences->getItemsPerPage();
 	
 			// Set the paginator
-			$threadPaginator = new paginator_Paginator('forum', $request->getParameter(paginator_Paginator::REQUEST_PARAMETER_NAME, 1), $items, $nbItemPerPage);
+			$threadPaginator = new paginator_Paginator('forum', $request->getParameter(paginator_Paginator::PAGEINDEX_PARAMETER_NAME, 1), $items, $nbItemPerPage);
 			$this->setParameter('threadPaginator', $threadPaginator);   
         }     
         

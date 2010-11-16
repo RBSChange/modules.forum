@@ -15,7 +15,7 @@ class forum_BlockForummemberlistAction extends forum_BlockBaseAction
 		if (count($items) > 0)
 		{
 			$nbItemPerPage = $preferences->getItemsPerPage();
-			$currentPage = intval($request->getParameter(paginator_Paginator::REQUEST_PARAMETER_NAME));
+			$currentPage = intval($request->getParameter(paginator_Paginator::PAGEINDEX_PARAMETER_NAME));
 			if ($currentPage <= 0)
 			{
 				$currentPage = 1;

@@ -65,7 +65,7 @@ class forum_BlockThreadAction extends forum_BlockBaseAction
 			$nbItemPerPage = $preferences->getItemsPerPage();
 			$currentPage = 1;
 	
-			if (!$request->hasParameter(paginator_Paginator::REQUEST_PARAMETER_NAME))
+			if (!$request->hasParameter(paginator_Paginator::PAGEINDEX_PARAMETER_NAME))
 			{
 				forum_ThreadService::getInstance()->addRead($thread);
 				$postId = intval($request->getParameter('post', 0));
@@ -85,7 +85,7 @@ class forum_BlockThreadAction extends forum_BlockBaseAction
 			}
 			else
 			{
-				$currentPage = intval($request->getParameter(paginator_Paginator::REQUEST_PARAMETER_NAME));
+				$currentPage = intval($request->getParameter(paginator_Paginator::PAGEINDEX_PARAMETER_NAME));
 			}
 			$index = ($currentPage - 1) * $nbItemPerPage;
 			for($i=0; $i< $nbItemPerPage; $i++)
@@ -163,7 +163,7 @@ class forum_BlockThreadAction extends forum_BlockBaseAction
 					$fts->save($thread);
 					$fts->activate($thread->getId());
 					$request->setParameter('cmpref', $thread->getId());
-					$request->setParameter(paginator_Paginator::REQUEST_PARAMETER_NAME, 1);
+					$request->setParameter(paginator_Paginator::PAGEINDEX_PARAMETER_NAME, 1);
 					return $this->executeView($context, $request);
 				}
 			}
@@ -233,7 +233,7 @@ class forum_BlockThreadAction extends forum_BlockBaseAction
 				else
 				{
 					$fts->save($thread);
-					$request->setParameter(paginator_Paginator::REQUEST_PARAMETER_NAME, 1);
+					$request->setParameter(paginator_Paginator::PAGEINDEX_PARAMETER_NAME, 1);
 					return $this->executeView($context, $request);
 				}
 			}
