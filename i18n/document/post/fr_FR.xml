@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.forum.document.post" lcid="fr_FR">
+  <key id="document-name">Message</key>
+  <key id="edition-form-title">Propriétés d'un sujet</key>
+  <key id="label">Message</key>
+  <key id="label-help">Message</key>
+  <key id="text">text</key>
+  <key id="text-help">text</key>
+  <key id="pseudonym">pseudonyme</key>
+  <key id="pseudonym-help">pseudonyme</key>
+  <key id="section">section</key>
+  <key id="section-help">section</key>
+  <key id="index">index</key>
+  <key id="index-help">index</key>
+  <key id="thread">sujet</key>
+  <key id="thread-help">Sujet</key>
+</i18n>

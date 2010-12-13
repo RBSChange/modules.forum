@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.forum.bo.tags" lcid="en_GB">
+  <key id="forum-list">Forum list</key>
+  <key id="forum-detail">Forum</key>
+  <key id="section-detail">Section</key>
+  <key id="thread-detail">Thread</key>
+  <key id="post-detail">Post</key>
+  <key id="forummember-list">Member's list</key>
+</i18n>

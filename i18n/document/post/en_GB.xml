@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.forum.document.post" lcid="en_GB">
+  <key id="document-name">Post</key>
+  <key id="edition-form-title">Post properties</key>
+  <key id="label">Post</key>
+  <key id="label-help">Post</key>
+  <key id="text">text</key>
+  <key id="text-help">text</key>
+  <key id="pseudonym">pseudonym</key>
+  <key id="pseudonym-help">pseudonym</key>
+  <key id="section">section</key>
+  <key id="section-help">section</key>
+  <key id="index">index</key>
+  <key id="index-help">index</key>
+  <key id="thread">thread</key>
+  <key id="thread-help">Thread</key>
+</i18n>

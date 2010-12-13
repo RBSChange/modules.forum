@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.forum.bo.blocks" lcid="en_GB">
+  <key id="forumcontextuallist">Forum's list of topics</key>
+  <key id="forum">Forum</key>
+  <key id="section">Section</key>
+  <key id="thread">Thread</key>
+  <key id="post">Message</key>
+  <key id="forummember">Member</key>
+  <key id="forummemberlist">Member's list</key>
+</i18n>

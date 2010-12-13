@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.forum.document.section" lcid="en_GB">
+  <key id="document-name">Section</key>
+  <key id="edition-form-title">Section properties</key>
+  <key id="label">Section</key>
+  <key id="label-help">Name of the section</key>
+  <key id="description">description</key>
+  <key id="description-help">Description of the section</key>
+  <key id="threadcount">Number of thread</key>
+  <key id="threadcount-help">Indicate the number of thread in this section</key>
+  <key id="postcount">Number of post</key>
+  <key id="postcount-help">Indicate the number of post in this section</key>
+  <key id="lastpostid">Last post ID</key>
+  <key id="lastpostid-help">Indicate the last post identifier of the section</key>
+</i18n>

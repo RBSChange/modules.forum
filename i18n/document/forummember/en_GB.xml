@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.forum.document.forummember" lcid="en_GB">
+  <key id="document-name">Forum member</key>
+  <key id="edition-form-title">forum member properties</key>
+  <key id="label">label</key>
+  <key id="label-help">label</key>
+  <key id="user">Change user</key>
+  <key id="user-help">Change user</key>
+  <key id="pseudonym">pseudonym</key>
+  <key id="pseudonym-help">Name used on the site</key>
+  <key id="sign">sign</key>
+  <key id="sign-help">sign</key>
+</i18n>

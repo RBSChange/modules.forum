@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.forum.document.forum" lcid="en_GB">
+  <key id="document-name">Forum</key>
+  <key id="edition-form-title">Forum properties</key>
+  <key id="label">forum</key>
+  <key id="label-help">Name of forum</key>
+  <key id="description">description</key>
+  <key id="description-help">Indicate a description for the forum</key>
+  <key id="ispublic">Is public</key>
+  <key id="ispublic-help">Indicate if the forum is public or non</key>
+  <key id="members">member</key>
+  <key id="members-help">Member's forum list</key>
+  <key id="moderators">moderators</key>
+  <key id="moderators-help">Moderator's forum list</key>
+</i18n>

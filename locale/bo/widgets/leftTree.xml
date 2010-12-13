@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<localization>
-	<entity id="label">
-		<locale lang="fr">libellé</locale>
-		<locale lang="en">label</locale>
-	</entity>
-</localization>

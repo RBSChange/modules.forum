@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.forum.document.thread" lcid="en_GB">
+  <key id="document-name">Thread</key>
+  <key id="edition-form-title">Thread properties</key>
+  <key id="label">Thread</key>
+  <key id="label-help">Thread</key>
+  <key id="text">text</key>
+  <key id="text-help">thread content</key>
+  <key id="forummemberid">forummemberid</key>
+  <key id="pseudonym">pseudonym</key>
+  <key id="pseudonym-help">pseudonym</key>
+  <key id="section">section</key>
+</i18n>

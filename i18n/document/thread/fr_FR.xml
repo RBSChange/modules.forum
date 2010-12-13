@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.forum.document.thread" lcid="fr_FR">
+  <key id="document-name">Sujet</key>
+  <key id="edition-form-title">Propriétés d'un sujet</key>
+  <key id="label">Sujet</key>
+  <key id="label-help">Sujet</key>
+  <key id="text">texte</key>
+  <key id="text-help">Texte du sujet</key>
+  <key id="forummemberid">Identifiant du membre</key>
+  <key id="forummemberid-help">Identifiant du membre créateur du sujet</key>
+  <key id="pseudonym">pseudonyme</key>
+  <key id="pseudonym-help">pseudonyme</key>
+  <key id="section">section</key>
+  <key id="section-help">Permet de changer le sujet de section</key>
+</i18n>

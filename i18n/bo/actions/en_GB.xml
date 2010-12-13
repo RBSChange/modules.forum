@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.forum.bo.actions" lcid="en_GB">
+  <key id="create_">Create</key>
+  <key id="createsection_">Create</key>
+  <key id="createthread_">Create</key>
+  <key id="create-forum">Create forum</key>
+  <key id="create-section">Create section</key>
+</i18n>
