@@ -177,4 +177,18 @@ class forum_ThreadService extends forum_MessageService
 	{
 		$this->createQuery()->add(Restrictions::eq('section', $section->getId()))->delete();
 	}
+	
+    /**
+     * @param forum_persistentdocument_thread $document
+     * @param string $moduleName
+     * @param string $treeType
+     * @param array<string, string> $nodeAttributes
+     */
+    public function addTreeAttributes($document, $moduleName, $treeType, &$nodeAttributes)
+    {
+    	if ($document->getForummember() !== null)
+    	{
+    		$nodeAttributes['membername'] = $document->getForummember()->getPseudonym();
+    	}
+    }
 }

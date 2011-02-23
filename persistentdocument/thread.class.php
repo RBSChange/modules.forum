@@ -7,7 +7,6 @@ class forum_persistentdocument_thread extends forum_persistentdocument_threadbas
 {
 	/**
 	 * Get the indexable document
-	 *
 	 * @return indexer_IndexedDocument
 	 */
 	public function getIndexedDocument()
@@ -75,17 +74,4 @@ class forum_persistentdocument_thread extends forum_persistentdocument_threadbas
 		}
 		return null;
 	}
-	
-    /**
-     * @param string $moduleName
-     * @param string $treeType
-     * @param array<string, string> $nodeAttributes
-     */
-    protected function addTreeAttributes ($moduleName, $treeType, &$nodeAttributes)
-    {
-    	if ($this->getForummember() !== null)
-    	{
-    		$nodeAttributes['membername'] = $this->getForummember()->getPseudonym();
-    	}
-    }
 }
